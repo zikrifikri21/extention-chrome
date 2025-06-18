@@ -109,7 +109,7 @@ function updateBoat() {
     boat.y = mouse.y - dragOffset.y;
     boat.speed = 0;
     boat.velocity = { x: 0, y: 0 };
-    return; // skip physics if dragging
+    return; 
   }
   ///asdasd
 
@@ -123,7 +123,6 @@ function updateBoat() {
     const dist = Math.sqrt(dx * dx + dy * dy);
     if (dist < 5) {
       boat.speed = 0;
-      //boat.angle = -Math.PI / 2;
       returningToPort = false;
     }
   }

@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Halaman Awal Kustom Saya",
+  "version": "1.0",
+  "description": "Mengganti halaman tab baru dengan tampilan yang lebih personal.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "icons": {
+    "48": "icon48.png"
+  }
+}

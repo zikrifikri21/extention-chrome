@@ -3,8 +3,13 @@
   "name": "Halaman Awal Kustom Saya",
   "version": "1.0",
   "description": "Mengganti halaman tab baru dengan tampilan yang lebih personal.",
+  "permissions": ["bookmarks"],
   "chrome_url_overrides": {
     "newtab": "newtab.html"
+  },
+  "host_permissions": [],
+  "action": {
+    "default_icon": "icon48.png"
   },
   "icons": {
     "48": "icon48.png"

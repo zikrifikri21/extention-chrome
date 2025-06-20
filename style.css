@@ -252,14 +252,45 @@ body {
     position: absolute;
     top: 230px;
     left: 40%;
-    font-size: 24px;
+    font-size: 40px;
     color: #fff;
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    font-family: 'Poppins', Arial, sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .1em;
+    animation:
+        typing 3.5s steps(40, end) 0s infinite alternate,
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
 }
 
 @media (max-width: 1200px) {
-
+    .eyyana-text {
+        font-size: 28px;
+        top: 200px;
+        left: 30%;
+    }
     .photo,
     .model-silhouette,
     .code-text {
@@ -273,7 +304,11 @@ body {
 }
 
 @media (max-width: 768px) {
-
+    .eyyana-text {
+        font-size: 18px;
+        top: 120px;
+        left: 10%;
+    }
     .photo,
     .model-silhouette {
         transform: scale(0.6);
@@ -350,7 +385,6 @@ body {
 
 .container-playlist {
     position: fixed;
-    /* Gunakan fixed agar tetap di posisi saat scroll */
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -366,7 +400,6 @@ body {
     animation: slideInFromBottom 0.8s ease-out;
 }
 
-/* Efek Kaca (Glassmorphism) */
 .glass-element {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -381,10 +414,8 @@ body {
     height: 60px;
     border-radius: 8px;
     object-fit: cover;
-    /* Pastikan gambar tidak gepeng */
     flex-shrink: 0;
     background-color: #333;
-    /* Warna placeholder saat gambar belum dimuat */
 }
 
 .track-info {
@@ -430,7 +461,6 @@ body {
 #youtube-player {
     position: absolute;
     top: -9999px;
-    /* Pindahkan jauh dari layar */
     left: -9999px;
     width: 1px;
     height: 1px;
@@ -480,4 +510,17 @@ canvas {
     background: none;
     padding: 0;
     border-radius: 10px;
+}
+.container-list-bookmark{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+.img-list{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
 }
